@@ -1,0 +1,9 @@
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Model\bin\Debug\netcoreapp2.1\ComericioOnline.Model.deps.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Model\bin\Debug\netcoreapp2.1\ComericioOnline.Model.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Model\bin\Debug\netcoreapp2.1\ComericioOnline.Model.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Model\obj\Debug\netcoreapp2.1\ComericioOnline.Model.csprojAssemblyReference.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Model\obj\Debug\netcoreapp2.1\ComericioOnline.Model.csproj.CoreCompileInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Model\obj\Debug\netcoreapp2.1\ComericioOnline.Model.AssemblyInfoInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Model\obj\Debug\netcoreapp2.1\ComericioOnline.Model.AssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Model\obj\Debug\netcoreapp2.1\ComericioOnline.Model.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Model\obj\Debug\netcoreapp2.1\ComericioOnline.Model.pdb

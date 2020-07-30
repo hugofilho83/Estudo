@@ -1,0 +1,17 @@
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\ComercioOnline.Teste.deps.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\ComercioOnline.Teste.runtimeconfig.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\ComercioOnline.Teste.runtimeconfig.dev.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\ComercioOnline.Teste.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\ComercioOnline.Teste.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\ComericioOnline.Model.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\bin\Debug\netcoreapp2.1\ComericioOnline.Model.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\obj\Debug\netcoreapp2.1\ComercioOnline.Teste.csprojAssemblyReference.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\obj\Debug\netcoreapp2.1\ComercioOnline.Teste.csproj.CoreCompileInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\obj\Debug\netcoreapp2.1\ComercioOnline.Teste.AssemblyInfoInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\obj\Debug\netcoreapp2.1\ComercioOnline.Teste.AssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\obj\Debug\netcoreapp2.1\ComercioOnline.Teste.csproj.CopyComplete
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\obj\Debug\netcoreapp2.1\ComercioOnline.Teste.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComercioOnline\obj\Debug\netcoreapp2.1\ComercioOnline.Teste.pdb

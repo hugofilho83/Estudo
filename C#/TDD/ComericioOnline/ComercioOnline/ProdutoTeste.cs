@@ -1,3 +1,7 @@
+using ComericioOnline.Model;
+using dn32.infraestrutura;
+using dn32.infraestrutura.Fabrica;
+using dn32.infraestrutura.Model;
 using System;
 using Xunit;
 
@@ -5,6 +9,22 @@ namespace ComercioOnline
 {
     public class ProdutoTeste
     {
+        private void InicializarInfraestrutura()
+        {
+            var parametrosDeInicializacao = new ParametrosDeInicializacao
+            {
+                EnderecoDeBackupDoBancoDeDados = "c:/ravendb-backup",
+                EnderecoDoBancoDeDados = "http://localhost:8080",
+                NomeDoAssemblyDaValidacao = "MinhaAplicacao.Validacao",
+                NomeDoAssemblyDoRepositorio = "MinhaAplicacao.Repositorio",
+                NomeDoAssemblyDoServico = "MinhaAplicacao.Servico",
+                NomeDoBancoDeDados = "banco-de-dados-de-minha-aplicacao"
+            };
+
+            Inicializar.Inicialize(parametrosDeInicializacao);
+        }
+
+
         [Fact]
         public void Cadastro()
         {
@@ -15,9 +35,11 @@ namespace ComercioOnline
                 CodigoDeBarras = "786456978796"
             };
 
-            Cadastre(Produto);
+            var servico = FabricaDeServico.Crie<Produto>();
 
-            Assert.NotEqual(produto.Codigo, 0);
+            servico.Cadastre(produto);
+
+            Assert.NotEqual(0, produto.Codigo);
         }
     }
 }
