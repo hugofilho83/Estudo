@@ -17,8 +17,8 @@ namespace RestWithAspNetCore.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
-        [HttpGet("{firstNumber}/{secundNumber}")]
+        // GET api/calculator/sum/5/2
+        [HttpGet("sum/{firstNumber}/{secundNumber}")]
         public ActionResult<string> Sum(string firstNumber, string secundNumber)
         {
             if (IsNumeric(firstNumber) && IsNumeric(secundNumber))
@@ -27,6 +27,81 @@ namespace RestWithAspNetCore.Controllers
                 return Ok(sum.ToString());
             }
             else 
+            {
+                return BadRequest("Input invalid, Values is not number");
+            }
+        }
+
+        // GET api/calculator/subtraction/5/2
+        [HttpGet("subtraction/{firstNumber}/{secundNumber}")]
+        public ActionResult<string> Subtraction(string firstNumber, string secundNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secundNumber))
+            {
+                var sum = ConvertToDecimal(firstNumber) - ConvertToDecimal(secundNumber);
+                return Ok(sum.ToString());
+            }
+            else
+            {
+                return BadRequest("Input invalid, Values is not number");
+            }
+        }
+
+        // GET api/calculator/division/5/2
+        [HttpGet("division/{firstNumber}/{secundNumber}")]
+        public ActionResult<string> Division(string firstNumber, string secundNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secundNumber))
+            {
+                var sum = ConvertToDecimal(firstNumber) / ConvertToDecimal(secundNumber);
+                return Ok(sum.ToString());
+            }
+            else
+            {
+                return BadRequest("Input invalid, Values is not number");
+            }
+        }
+
+        // GET api/calculator/multiplication/5/2
+        [HttpGet("multiplication/{firstNumber}/{secundNumber}")]
+        public ActionResult<string> Multiplication(string firstNumber, string secundNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secundNumber))
+            {
+                var sum = ConvertToDecimal(firstNumber) * ConvertToDecimal(secundNumber);
+                return Ok(sum.ToString());
+            }
+            else
+            {
+                return BadRequest("Input invalid, Values is not number");
+            }
+        }
+
+        // GET api/calculator/multiplication/5/2
+        [HttpGet("mean/{firstNumber}/{secundNumber}")]
+        public ActionResult<string> Mean(string firstNumber, string secundNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secundNumber))
+            {
+                var sum = (ConvertToDecimal(firstNumber) + ConvertToDecimal(secundNumber)) / 2;
+                return Ok(sum.ToString());
+            }
+            else
+            {
+                return BadRequest("Input invalid, Values is not number");
+            }
+        }
+
+        // GET api/calculator/square-root/5/2
+        [HttpGet("square-root/{firstNumber}/{secundNumber}")]
+        public ActionResult<string> SquareRoot(string firstNumber)
+        {
+            if (IsNumeric(firstNumber)) 
+            {
+                var square = Math.Sqrt((double)ConvertToDecimal(firstNumber));
+                return Ok(square.ToString());
+            }
+            else
             {
                 return BadRequest("Input invalid, Values is not number");
             }
