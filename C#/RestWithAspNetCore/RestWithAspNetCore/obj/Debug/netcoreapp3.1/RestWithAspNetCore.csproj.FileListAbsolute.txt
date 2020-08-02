@@ -1,0 +1,16 @@
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\bin\Debug\netcoreapp3.1\RestWithAspNetCore.exe
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\bin\Debug\netcoreapp3.1\RestWithAspNetCore.deps.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\bin\Debug\netcoreapp3.1\RestWithAspNetCore.runtimeconfig.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\bin\Debug\netcoreapp3.1\RestWithAspNetCore.runtimeconfig.dev.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\bin\Debug\netcoreapp3.1\RestWithAspNetCore.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\bin\Debug\netcoreapp3.1\RestWithAspNetCore.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\obj\Debug\netcoreapp3.1\RestWithAspNetCore.csprojAssemblyReference.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\obj\Debug\netcoreapp3.1\RestWithAspNetCore.AssemblyInfoInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\obj\Debug\netcoreapp3.1\RestWithAspNetCore.AssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\obj\Debug\netcoreapp3.1\RestWithAspNetCore.RazorTargetAssemblyInfo.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\obj\Debug\netcoreapp3.1\RestWithAspNetCore.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\obj\Debug\netcoreapp3.1\RestWithAspNetCore.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\RestWithAspNetCore\RestWithAspNetCore\obj\Debug\netcoreapp3.1\RestWithAspNetCore.genruntimeconfig.cache
