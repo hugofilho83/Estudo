@@ -95,6 +95,7 @@ function TeacherForm() {
   return (
     <div id="page-teacher-form" className="container">
       <PageHeader
+        titlePage="Dar Aulas"
         title="Que incrivel que você quer dar aulas."
         description="O primeiro passo é preencher esse formulário de inscrição."
       />
