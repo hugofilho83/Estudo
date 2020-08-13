@@ -8,8 +8,10 @@ import loadingImg from "../../assets/images/landing.svg";
 
 import studyIcon from "../../assets/images/icons/study.svg";
 import giveClassesIcon from "../../assets/images/icons/give-classes.svg";
-import purpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
 import api from "../../services/api";
+
+import { AiFillHeart } from "react-icons/ai";
+import { AiOutlinePoweroff } from "react-icons/ai";
 
 function Landing() {
   const [tatalConnections, setTotalConnections] = useState(0);
@@ -24,33 +26,62 @@ function Landing() {
   return (
     <div id="page-landing">
       <div id="page-landing-content" className="container">
-        <div id="logo-container">
-          <img src={logoImg} alt="logo Proffy" />
-          <h2>Sua plataforma de estudos online.</h2>
-        </div>
+        <header>
+          <a href="/" className="avatar">
+            <img
+              src="https://lh3.googleusercontent.com/a-/AOh14Gh1kKs_TfiXZ-qKrOzxM0H8kFScHX0au9J7xVvz2_4=s88-c-k-c0x00ffffff-no-rj-mo"
+              alt="Avatar"
+            />
+            <span>Hugo Tavares</span>
+          </a>
 
-        <img
-          src={loadingImg}
-          alt="Plataforma de estudos"
-          className="hero-image"
-        />
-
-        <div className="buttons-container">
-          <Link to="/study" className="study">
-            <img src={studyIcon} alt="Estudar" />
-            Estudar
+          <Link to="/" className="exit">
+            <i>
+              <AiOutlinePoweroff />
+            </i>
           </Link>
+        </header>
+        <main>
+          <div className="logo-container">
+            <img src={logoImg} alt="logo Proffy" />
+            <h2>Sua plataforma de estudos online.</h2>
+          </div>
 
-          <Link to="/give-classes" className="give-classes">
-            <img src={giveClassesIcon} alt="Dar Aulas" />
-            Dar Aulas
-          </Link>
-        </div>
+          <div>
+            <img
+              src={loadingImg}
+              alt="Plataforma de estudos"
+              className="hero-image"
+            />
+          </div>
+        </main>
+        <footer>
+          <div className="footer-container">
+            <div className="messeger-wellcome">
+              <span>Seja bem-vindo.</span>
+              <strong>O que deseja fazer?</strong>
+            </div>
+            <div className="buttons-container">
+              <Link to="/study" className="study">
+                <img src={studyIcon} alt="Estudar" />
+                <span>Estudar</span>
+              </Link>
 
-        <span className="total-connections">
-          Total de {tatalConnections} conexões já realizadas{" "}
-          <img src={purpleHeartIcon} alt="coração roxo" />
-        </span>
+              <Link to="/give-classes" className="give-classes">
+                <img src={giveClassesIcon} alt="Dar Aulas" />
+                Dar Aulas
+              </Link>
+            </div>
+            <div className="total-connections">
+              <span>
+                Total de {tatalConnections} conexões já realizadas{" "}
+                <i>
+                  <AiFillHeart />
+                </i>
+              </span>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
