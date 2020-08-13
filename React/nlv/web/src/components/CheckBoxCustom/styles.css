@@ -1,0 +1,55 @@
+.labelContainer {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  text-align: end;
+}
+
+.labelContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.labelContainer span {
+  margin-right: 5px;
+}
+
+.check {
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 0.8rem;
+  position: relative;
+  background-color: #ccc;
+}
+
+.labelContainer input:checked ~ .check {
+  background-color: #04d361;
+  border: 1px solid #04d361;
+}
+
+.labelContainer .check::after {
+  top: 5;
+  left: 5;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.check::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.labelContainer input::checked ~ .check {
+  display: block;
+}
