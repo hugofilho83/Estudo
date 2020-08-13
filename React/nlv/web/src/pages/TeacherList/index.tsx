@@ -30,7 +30,7 @@ function TeacherList() {
 
   return (
     <div id="page-teacher-list" className="container">
-      <PageHeader title="Estes são os Proffy disponíveis.">
+      <PageHeader titlePage="Estudar" title="Estes são os Proffy disponíveis.">
         <form action="#" id="search-teachers" onSubmit={searchTeachers}>
           <SelectCustom
             name="subject"
