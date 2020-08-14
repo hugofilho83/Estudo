@@ -67,40 +67,47 @@
   font-weight: bold;
 }
 
-.fazer-login .div-email input {
-  border-radius: 0.8rem 0.8rem 0rem 0rem;
-  width: 100%;
-  height: 5.6rem;
+.div-email {
   background: var(--color-input-background);
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
   border: 1px solid var(--color-line-in-white);
+  display: flex;
+  width: 100%;
+  height: 6rem;
   outline: 0;
-  padding: 0 1.6rem;
+  padding: 0.5rem 1.6rem;
   font: 1.6rem Archivo;
 }
 
-.div-password {
-  margin-top: -1px;
-  display: flex;
-  align-items: center;
-  border-radius: 0rem 0rem 0.8rem 0.8rem;
-  height: 5.6rem;
-  background: var(--color-input-background);
-  border: 1px solid var(--color-line-in-white);
-  overflow: hidden;
+.div-email input {
+  height: 100%;
+  align-self: flex-end;
 }
 
-.fazer-login .div-password input {
+.div-password {
+  border-radius: 0rem 0rem 0.8rem 0.8rem;
+  border: 1px solid var(--color-line-in-white);
+  background: var(--color-input-background);
+  display: flex;
+  margin-top: -1px;
+  height: 6rem;
+  padding-top: 0;
+  padding-left: 1.6rem;
+}
+
+.div-password input {
   width: 100%;
   height: 100%;
   border: none;
   outline: 0;
-  padding: 0 1.6rem;
+  padding-top: 1rem;
   font: 1.6rem Archivo;
   background: var(--color-input-background);
   text-decoration: none;
 }
 
 .div-password i {
+  align-self: center;
   margin: 0 10px;
   font-size: 1.6em;
   color: var(--color-text-complement);

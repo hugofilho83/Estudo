@@ -5,9 +5,11 @@ import backgroundLogoLogin from "../../assets/images/background_logo_login.svg";
 import purpleHeartIcon from "../../assets/images/icons/purple-heart.svg";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import CheckBoxCustom from "../../components/CheckBoxCustom";
+import InputLabelCustom from "../../components/InputLabelFloat";
 
 import "./styles.css";
-import CheckBoxCustom from "../../components/CheckBoxCustom";
 
 function Login() {
   const [isVisibilityPassword, setIsVisibilityPassword] = useState(false);
@@ -42,14 +44,29 @@ function Login() {
             <h1>Fazer Login</h1>
 
             <div className="div-email">
-              <input type="text" id="email" placeholder="E-mail" />
+              {/* <input type="text" id="email" placeholder="E-mail" /> */}
+              <InputLabelCustom
+                label="E-Mail"
+                name="email"
+                type="text"
+                placeHolder=" "
+              />
             </div>
 
             <div className="div-password">
-              <input
+              {/* <input
                 type={isVisibilityPassword ? "text" : "password"}
                 id="senha"
                 placeholder="Senha"
+              /> */}
+
+              <InputLabelCustom
+                label="Senha"
+                name="senha"
+                type={isVisibilityPassword ? "text" : "password"}
+                id="senha"
+                placeholder="Senha"
+                placeHolder=" "
               />
               <i
                 onClick={showPassword}
@@ -74,9 +91,9 @@ function Login() {
                 <CheckBoxCustom isChecked label={"Lembre-me"} />
               </div>
               <div className="esqueci-senha">
-                <a href="/" className="link-esqueci-senha">
+                <Link to="/reset-password" className="link-esqueci-senha">
                   Esqueci minha senha
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -87,7 +104,7 @@ function Login() {
             <div className="footer-login">
               <div className="footer-login-cadastre-se">
                 <span>Não tem conta?</span>
-                <a href="Register">Cadastre-se</a>
+                <Link to="register">Cadastre-se</Link>
               </div>
               <span className="de-graca">
                 É de graça
