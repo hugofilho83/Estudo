@@ -26,7 +26,7 @@ function SucessReset() {
           <h1>Redefinição enviada!</h1>
           <span>Boa, agora é só checar o e-mail que foi enviado para</span>
           <span>você redefinir sua senha e aproveitar os estudos.</span>
-          <Link to="/">Fazer Login</Link>
+          <Link to="/">Voltar Login</Link>
         </div>
       </div>
     </div>
