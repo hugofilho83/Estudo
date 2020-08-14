@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ResetPassword from "./pages/ResetPassword";
 import SucessNew from "./pages/SuccessNew";
 import SucessRegister from "./pages/SuccessRegister";
 import SucessReset from "./pages/SuccessReset";
@@ -21,6 +22,7 @@ function Routes() {
       <Route path="/success-register" exact component={SucessRegister} />
       <Route path="/success-new" exact component={SucessNew} />
       <Route path="/success-reset" exact component={SucessReset} />
+      <Route path="/reset-password" exact component={ResetPassword} />
     </BrowserRouter>
   );
 }
