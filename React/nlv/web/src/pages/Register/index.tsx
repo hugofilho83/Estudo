@@ -6,6 +6,7 @@ import backgroundLogoLogin from "../../assets/images/background_logo_login.svg";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import backIcon from "../../assets/images/icons/back.svg";
+import InputLabelCustom from "../../components/InputLabelFloat";
 
 import "./styles.css";
 
@@ -31,19 +32,47 @@ function Register() {
               <p>Preenche os dados abaixo para começar</p>
 
               <div className="registrer-nome">
-                <input type="text" id="nome" placeholder="Nome" />
+                {/* <input type="text" id="nome" placeholder="Nome" /> */}
+                <InputLabelCustom
+                  label="Nome"
+                  name="nome"
+                  type="text"
+                  placeHolder=" "
+                />
               </div>
               <div className="registrer-sobrenome">
-                <input type="text" id="sobrenome" placeholder="Sobrenome" />
+                {/* <input type="text" id="sobrenome" placeholder="Sobrenome" /> */}
+
+                <InputLabelCustom
+                  label="Sobrenome"
+                  name="sobrenome"
+                  type="text"
+                  placeHolder=" "
+                />
               </div>
-              <div className="registrer-email">
-                <input type="text" id="email" placeholder="E-mail" />
+              <div className="reg-email">
+                {/* <input type="text" id="email" placeholder="E-mail" /> */}
+                <InputLabelCustom
+                  label="E-mail"
+                  name="contato"
+                  type="text"
+                  placeHolder=" "
+                />
               </div>
               <div className="registrer-password">
-                <input
+                {/* <input
                   type={isVisibilityPassword ? "text" : "password"}
                   id="senha"
                   placeholder="Senha"
+                /> */}
+
+                <InputLabelCustom
+                  label="Senha"
+                  name="senha"
+                  type={isVisibilityPassword ? "text" : "password"}
+                  id="senha"
+                  placeholder="Senha"
+                  placeHolder=" "
                 />
                 <i
                   onClick={showPassword}
