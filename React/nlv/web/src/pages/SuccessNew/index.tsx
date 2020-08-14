@@ -28,7 +28,7 @@ function SucessNew() {
             Tudo certo, seu cadastro está na nossa lista de professores.
           </span>
           <span>Agora é só ficar de olho no seu WhatsApp.</span>
-          <Link to="/">Fazer Login</Link>
+          <Link to="/">Acessar</Link>
         </div>
       </div>
     </div>
