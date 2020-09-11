@@ -1,18 +1,15 @@
-package br.htaf.com.presentarion
+package br.htaf.com.presentation
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.RequiresApi
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelStore
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.htaf.com.R
 import br.htaf.com.adapters.PokemonAdapter
-import br.htaf.com.data.model.Pokemon
 import br.htaf.com.data.model.PokemonViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
