@@ -30,94 +30,20 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtName"
+                android:id="@+id/txtNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="@color/textColorPrimary"
                 android:textSize="25sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtLabelType"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/txtLabelType"
-                    android:textColor="@color/textColorPrimary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/txtType"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="9"
-                    android:text="TextView"
-                    android:textColor="@color/textColorSecondary"
-                    android:textColorHighlight="@color/textColorSecondary"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
             <TextView
-                android:id="@+id/txtSkills"
+                android:id="@+id/txtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textColor="@color/textColorSecondary" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtLabelHeight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/txtLavelHeight"
-                    android:textColor="@color/textColorPrimary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/txtHeight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="9"
-                    android:text="TextView"
-                    android:textColor="@color/textColorSecondary"
-                    android:textColorHighlight="@color/textColorSecondary"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtLabelWeight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/txtLabelWeight"
-                    android:textColor="@color/textColorPrimary"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/txtWeight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="9"
-                    android:text="TextView"
-                    android:textColor="@color/textColorSecondary"
-                    android:textColorHighlight="@color/textColorSecondary"
-                    android:textSize="16sp" />
-            </LinearLayout>
+                android:textColor="@color/textColorSecondary"
+                android:textSize="25sp" />
 
         </LinearLayout>
     </LinearLayout>

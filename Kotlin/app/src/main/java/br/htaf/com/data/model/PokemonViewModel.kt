@@ -37,11 +37,7 @@ class PokemonViewModel : ViewModel() {
                         for (result in pokemonsbodyResponse.pokemonResults) {
                             val pokemon: Pokemon = Pokemon(
                                 number = pokemons.count() + 1,
-                                name = result.name,
-                                "",
-                                "",
-                                0F,
-                                0F
+                                name = result.name
                             );
                             pokemons.add(pokemon);
                         }

@@ -9,4 +9,6 @@
     <color name="textColorDivider">#BDBDBD</color>
 
     <color name="textColorTextIcon">#FFFFFF</color>
+    <color name="bgLineItemPokemon">#EAECEE</color>
+
 </resources>

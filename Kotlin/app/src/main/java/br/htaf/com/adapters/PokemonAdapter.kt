@@ -8,10 +8,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import br.htaf.com.R
 import br.htaf.com.data.model.Pokemon
 import kotlinx.android.synthetic.main.item_pokemon.view.*
+import kotlinx.android.synthetic.main.item_pokemon.view.imgFoto
+import kotlinx.android.synthetic.main.item_pokemon.view.txtName
+import kotlinx.android.synthetic.main.item_pokemon.view.txtNumber
+import kotlinx.android.synthetic.main.item_pokemon_carview.view.*
 import java.io.InputStream
 import java.net.URL
 
@@ -23,7 +28,7 @@ class PokemonAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_pokemon, parent, false);
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_pokemon_carview, parent, false);
         return PokemonViewHolder(view);
     }
 
@@ -38,20 +43,14 @@ class PokemonAdapter(
 
     class PokemonViewHolder(view: View) : RecyclerView.ViewHolder(view)
     {
+        val card :CardView = view.cardPokemon;
         private val txtName = view.txtName;
-        private val txtType = view.txtType;
-        private val txtSkill = view.txtSkills;
-        private val txtWeight = view.txtWeight;
-        private val txtHeight = view.txtHeight;
+        private val txtNumber =  view.txtNumber;
         private val imgPhoto = view.imgFoto;
 
         fun bindView(pokemon: Pokemon) {
-            txtName.text = "#"+pokemon.number.toString() +" "+ pokemon.name;
-            txtType.text = pokemon.type;
-            txtSkill.text = "Skills: " + pokemon.skills;
-            txtWeight.text = pokemon.weight.toString() + "Kg";
-            txtHeight.text = pokemon.height.toString() + "m";
-
+            txtName.text = pokemon.name;
+            txtNumber.text = "#"+pokemon.number.toString();
             val downloadImageTask = DownloadImageTask(imgPhoto).execute(pokemon.number.toString());
         }
     }
