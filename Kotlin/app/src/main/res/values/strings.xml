@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Pokedex</string>
+    <string name="txtLabelWeight">Peso:</string>
+    <string name="txtLavelHeight">Altura:</string>
+    <string name="txtLabelType">Tipo:</string>
 
 </resources>
