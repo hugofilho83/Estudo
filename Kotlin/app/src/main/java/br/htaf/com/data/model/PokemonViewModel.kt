@@ -4,7 +4,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
 import android.util.Log
-import android.widget.ImageView
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.htaf.com.data.PokeApiService
@@ -24,7 +23,7 @@ class PokemonViewModel : ViewModel() {
     {
         //pokemonsLiveData.value = getListFakePokemon();
 
-        PokeApiService.iniRetrofit().getPokemonsResponse().enqueue(object :
+        PokeApiService.iniRetrofit().getPokemonsResponse(0,1050).enqueue(object :
             Callback<PokemonsBodyResponse> {
             override fun onResponse(
                 call: Call<PokemonsBodyResponse>,
@@ -34,11 +33,17 @@ class PokemonViewModel : ViewModel() {
                     val pokemons: MutableList<Pokemon> = mutableListOf();
 
                     response.body()?.let { pokemonsbodyResponse ->
+                       
                         for (result in pokemonsbodyResponse.pokemonResults) {
+                            
+                            val separado: List<String> = result.url.split("/").map{it.trim()};
+                            
                             val pokemon: Pokemon = Pokemon(
-                                number = pokemons.count() + 1,
-                                name = result.name
+                                number = separado[6],
+                                name = result.name,
+                                null
                             );
+
                             pokemons.add(pokemon);
                         }
                     }
@@ -53,6 +58,4 @@ class PokemonViewModel : ViewModel() {
 
         })
     }
-
-
 }

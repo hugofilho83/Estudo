@@ -50,34 +50,42 @@ class PokemonAdapter(
 
         fun bindView(pokemon: Pokemon) {
             txtName.text = pokemon.name;
-            txtNumber.text = "#"+pokemon.number.toString();
-            val downloadImageTask = DownloadImageTask(imgPhoto).execute(pokemon.number.toString());
+            txtNumber.text = "#"+pokemon.number;
+
+            imgPhoto.setImageResource(R.drawable.picture_120px);
+
+            if(pokemon.photo == null){
+                pokemon.photo =  DownloadImageTask(imgPhoto, pokemon.photo).execute(pokemon.number).get();
+            }else{
+                imgPhoto.setImageBitmap(pokemon.photo);
+            }
         }
     }
 
-    private class DownloadImageTask(bmImage: ImageView) :
-        AsyncTask<String?, Void?, Bitmap?>() {
-        var bmImage: ImageView
+    private class DownloadImageTask(bmImage: ImageView, photo :Bitmap?) : AsyncTask<String?, Void?, Bitmap?>() {
+        var bmImage: ImageView = bmImage
+        var photo : Bitmap? = photo
 
         override fun onPostExecute(result: Bitmap?) {
             bmImage.setImageBitmap(result)
-        }
-
-        init {
-            this.bmImage = bmImage
+            result.let {
+                photo = it;
+            }
         }
 
         override fun doInBackground(vararg params: String?): Bitmap? {
-            val urldisplay = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + params[0] + ".png"
-            var mIcon11: Bitmap? = null
+            //val urlimage = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + params[0] + ".png";
+            val urlimage = "https://pokeres.bastionbot.org/images/pokemon/" + params[0] + ".png";
+            var image: Bitmap? = null;
             try {
-                val `in`: InputStream = URL(urldisplay).openStream()
-                mIcon11 = BitmapFactory.decodeStream(`in`)
+                val imgStream: InputStream = URL(urlimage).openStream();
+                image = BitmapFactory.decodeStream(imgStream);
             } catch (e: Exception) {
-                Log.e("Error", e.message)
-                e.printStackTrace()
+                Log.e("Error", e.message);
+                e.printStackTrace();
             }
-            return mIcon11
+
+            return image;
         }
     }
 }
