@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.htaf.com.R
 import br.htaf.com.adapters.PokemonAdapter
+import br.htaf.com.apresentation.details.DetailsActivity
 import br.htaf.com.data.model.PokemonViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -33,7 +34,11 @@ class MainActivity : AppCompatActivity() {
                 {
                     layoutManager = LinearLayoutManager(this@MainActivity, RecyclerView.VERTICAL, false)
                     setHasFixedSize(true)
-                    adapter = PokemonAdapter(pokemons);
+                    adapter = PokemonAdapter(pokemons){pokemon ->
+                        this@MainActivity.startActivity(
+                            DetailsActivity.getStartIntent(this@MainActivity, pokemon.number, pokemon.name)
+                        );
+                    }
                 }
             }
         });
