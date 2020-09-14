@@ -10,7 +10,6 @@ Repositório para armazenar os artefatos gerado durante os estudos.
 3. Java
 	* Leitura Codigo Barra [zxing](https://github.com/zxing/zxing) (android)
 	
-
 4. React
    * Bootcamp Alura (mvflix)
-   * Botcamp NextLevel Rocketseat nlv (Front-End(React.js), Back-End(Node.js), Mobile(React Native) )
+   * Bootcamp NextLevel Rocketseat nlv (Front-End(React.js), Back-End(Node.js), Mobile(React Native) )
