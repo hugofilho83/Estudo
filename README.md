@@ -7,9 +7,11 @@ Repositório para armazenar os artefatos gerado durante os estudos.
 	* TDD
 2. Kotlin
 	
-	* Pokedex ([Rotrofit](https://square.github.io/retrofit/), [Gson](https://github.com/google/gson), MVVM)
+	* Pokedex ([Rotrofit](https://square.github.io/retrofit/), [Gson](https://github.com/google/gson), MVVM) (android)
 	
-	* Leitura Codigo Barra [zxing](https://github.com/zxing/zxing) (android)
+	* Leitura Código Barra e QRCode [zxing](https://github.com/zxing/zxing) (android)
 4. React
    * Bootcamp Alura (mvflix)
    * Bootcamp NextLevel Rocketseat nlv (Front-End(React.js), Back-End(Node.js), Mobile(React Native) )
+4. Java
+   * Leitor Código de Barras  e QRCode [zxing](https://github.com/zxing/zxing) (android)

@@ -1,9 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <SignAssembly>true</SignAssembly>
+
+    <AssemblyOriginatorKeyFile>ComercioOnline.Teste.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ComericioOnline.Model\ComericioOnline.Model.csproj" />
+    <ProjectReference Include="..\ComericioOnline.Model\ComercioOnline.Model.csproj" />
+    <ProjectReference Include="..\ComericioOnline.Servico\ComercioOnline.Servico.csproj" />
+    <ProjectReference Include="..\ComericioOnline.Validaticao\ComercioOnline.Validaticao.csproj" />
   </ItemGroup>
 
 </Project>

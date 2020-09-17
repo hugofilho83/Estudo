@@ -21,17 +21,23 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netcoreapp2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "netcoreapp2.1": {
             "projectReferences": {
-              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComericioOnline.Model.csproj": {
-                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComericioOnline.Model.csproj"
+              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj": {
+                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj"
+              },
+              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj": {
+                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj"
+              },
+              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj": {
+                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj"
               }
             }
           }
@@ -43,15 +49,23 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "netcoreapp2.1": {
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.5.0, )"
+              "version": "[16.6.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
             },
             "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[1.3.0, )"
             },
             "dn32.infraestrutura": {
               "target": "Package",
@@ -59,11 +73,13 @@
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.1, )"
             },
             "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.2, )"
             }
           },
           "imports": [
@@ -76,21 +92,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComericioOnline.Model.csproj": {
+    "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComericioOnline.Model.csproj",
-        "projectName": "ComericioOnline.Model",
-        "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComericioOnline.Model.csproj",
+        "projectUniqueName": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj",
+        "projectName": "ComercioOnline.Model",
+        "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj",
         "packagesPath": "C:\\Users\\htaf\\.nuget\\packages\\",
         "outputPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\obj\\",
         "projectStyle": "PackageReference",
@@ -102,14 +113,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netcoreapp2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "netcoreapp2.1": {
             "projectReferences": {}
           }
         },
@@ -120,8 +131,14 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "netcoreapp2.1": {
           "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
             "dn32.infraestrutura": {
               "target": "Package",
               "version": "[1.2.4, )"
@@ -137,12 +154,142 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj",
+        "projectName": "ComercioOnline.Servico",
+        "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj",
+        "packagesPath": "C:\\Users\\htaf\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\htaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj": {
+                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj"
+              },
+              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj": {
+                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
             "Microsoft.NETCore.App": {
-              "privateAssets": "all"
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "dn32.infraestrutura": {
+              "target": "Package",
+              "version": "[1.2.4, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj",
+        "projectName": "ComercioOnline.Validaticao",
+        "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj",
+        "packagesPath": "C:\\Users\\htaf\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\htaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj": {
+                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "dn32.infraestrutura": {
+              "target": "Package",
+              "version": "[1.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3600,17 +3600,46 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "ComericioOnline.Model/1.0.0": {
+      "ComercioOnline.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "dn32.infraestrutura": "1.2.4"
         },
         "compile": {
-          "bin/placeholder/ComericioOnline.Model.dll": {}
+          "bin/placeholder/ComercioOnline.Model.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ComericioOnline.Model.dll": {}
+          "bin/placeholder/ComercioOnline.Model.dll": {}
+        }
+      },
+      "ComercioOnline.Servico/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "ComercioOnline.Model": "1.0.0",
+          "ComercioOnline.Validaticao": "1.0.0",
+          "dn32.infraestrutura": "1.2.4"
+        },
+        "compile": {
+          "bin/placeholder/ComercioOnline.Servico.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ComercioOnline.Servico.dll": {}
+        }
+      },
+      "ComercioOnline.Validaticao/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "ComercioOnline.Model": "1.0.0",
+          "dn32.infraestrutura": "1.2.4"
+        },
+        "compile": {
+          "bin/placeholder/ComercioOnline.Validaticao.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ComercioOnline.Validaticao.dll": {}
         }
       }
     }
@@ -10398,15 +10427,27 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "ComericioOnline.Model/1.0.0": {
+    "ComercioOnline.Model/1.0.0": {
       "type": "project",
-      "path": "../ComericioOnline.Model/ComericioOnline.Model.csproj",
-      "msbuildProject": "../ComericioOnline.Model/ComericioOnline.Model.csproj"
+      "path": "../ComericioOnline.Model/ComercioOnline.Model.csproj",
+      "msbuildProject": "../ComericioOnline.Model/ComercioOnline.Model.csproj"
+    },
+    "ComercioOnline.Servico/1.0.0": {
+      "type": "project",
+      "path": "../ComericioOnline.Servico/ComercioOnline.Servico.csproj",
+      "msbuildProject": "../ComericioOnline.Servico/ComercioOnline.Servico.csproj"
+    },
+    "ComercioOnline.Validaticao/1.0.0": {
+      "type": "project",
+      "path": "../ComericioOnline.Validaticao/ComercioOnline.Validaticao.csproj",
+      "msbuildProject": "../ComericioOnline.Validaticao/ComercioOnline.Validaticao.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "ComericioOnline.Model >= 1.0.0",
+      "ComercioOnline.Model >= 1.0.0",
+      "ComercioOnline.Servico >= 1.0.0",
+      "ComercioOnline.Validaticao >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.6.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "coverlet.collector >= 1.3.0",
@@ -10445,8 +10486,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComericioOnline.Model.csproj": {
-              "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComericioOnline.Model.csproj"
+            "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj": {
+              "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj"
+            },
+            "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj": {
+              "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj"
+            },
+            "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj": {
+              "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj"
             }
           }
         }
@@ -10465,6 +10512,7 @@
             "version": "[16.6.1, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -10491,10 +10539,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
