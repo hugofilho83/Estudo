@@ -1,0 +1,205 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj": {}
+  },
+  "projects": {
+    "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj",
+        "projectName": "ComercioOnline.Model",
+        "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj",
+        "packagesPath": "C:\\Users\\htaf\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\htaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "dn32.infraestrutura": {
+              "target": "Package",
+              "version": "[1.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj",
+        "projectName": "ComercioOnline.Servico",
+        "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\ComercioOnline.Servico.csproj",
+        "packagesPath": "C:\\Users\\htaf\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Servico\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\htaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj": {
+                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj"
+              },
+              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj": {
+                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "dn32.infraestrutura": {
+              "target": "Package",
+              "version": "[1.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj",
+        "projectName": "ComercioOnline.Validaticao",
+        "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\ComercioOnline.Validaticao.csproj",
+        "packagesPath": "C:\\Users\\htaf\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Validaticao\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\htaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj": {
+                "projectPath": "D:\\Projetos\\C#\\EstudoTDD\\Estudo\\C#\\TDD\\ComericioOnline\\ComericioOnline.Model\\ComercioOnline.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "dn32.infraestrutura": {
+              "target": "Package",
+              "version": "[1.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

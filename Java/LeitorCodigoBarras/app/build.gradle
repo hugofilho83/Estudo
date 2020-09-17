@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            // Caso queira configurar o Android Studio para assinar o APK,
+            // preencha os parâmetros abaixo. As chaves devem ser fornecidas
+            // pelo fabricante ou fornecedor. É necessário também descomentar
+            // as linhas 'signingConfig' dos buildTypes abaixo.
+            /*storeFile file("D:\\SRI\\MCQ_Desenvolvimento\\Development_MCQDesenvolvimento_CustomerAPP.jks")
+            storePassword 'Development@MCQDesenvolvimento2018'
+            keyAlias 'developmentmcqdesenvolvimento_customerapp'
+            keyPassword 'Development@MCQDesenvolvimento2018'*/
+
+            storeFile file("D:\\SRI\\MCQ_Desenvolvimento\\Development_GertecDeveloper_EnhancedAPP.jks")
+            storePassword 'Development@GertecDeveloper2018'
+            keyAlias 'developmentgertecdeveloper_enhancedapp'
+            keyPassword 'Development@GertecDeveloper2018'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        applicationId "br.htaf.myapplication"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            jniDebuggable true
+            debuggable true
+            // Descomentar caso queira que o Gradle assine (e preencha o 'config' acima).
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+    implementation 'pub.devrel:easypermissions:1.2.0'
+    implementation 'com.google.android.material:material:1.2.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+}

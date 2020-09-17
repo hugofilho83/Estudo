@@ -1,0 +1,12 @@
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\obj\Debug\netcoreapp2.1\ComercioOnline.Validaticao.csprojAssemblyReference.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\obj\Debug\netcoreapp2.1\ComercioOnline.Validaticao.AssemblyInfoInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\obj\Debug\netcoreapp2.1\ComercioOnline.Validaticao.AssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\obj\Debug\netcoreapp2.1\ComercioOnline.Validaticao.csproj.CoreCompileInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\bin\Debug\netcoreapp2.1\ComercioOnline.Validaticao.deps.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\bin\Debug\netcoreapp2.1\ComercioOnline.Validaticao.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\bin\Debug\netcoreapp2.1\ComercioOnline.Validaticao.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\bin\Debug\netcoreapp2.1\ComercioOnline.Model.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\bin\Debug\netcoreapp2.1\ComercioOnline.Model.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\obj\Debug\netcoreapp2.1\ComercioOnline.Validaticao.csproj.CopyComplete
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\obj\Debug\netcoreapp2.1\ComercioOnline.Validaticao.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\TDD\ComericioOnline\ComericioOnline.Validaticao\obj\Debug\netcoreapp2.1\ComercioOnline.Validaticao.pdb
