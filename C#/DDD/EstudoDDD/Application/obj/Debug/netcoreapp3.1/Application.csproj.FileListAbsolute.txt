@@ -1,0 +1,14 @@
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\bin\Debug\netcoreapp3.1\Application.deps.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\bin\Debug\netcoreapp3.1\Application.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\bin\Debug\netcoreapp3.1\Application.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\bin\Debug\netcoreapp3.1\Entitites.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\bin\Debug\netcoreapp3.1\Entitites.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\obj\Debug\netcoreapp3.1\Application.csprojAssemblyReference.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfoInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\obj\Debug\netcoreapp3.1\Application.csproj.CoreCompileInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\obj\Debug\netcoreapp3.1\Application.csproj.CopyComplete
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\obj\Debug\netcoreapp3.1\Application.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Application\obj\Debug\netcoreapp3.1\Application.pdb

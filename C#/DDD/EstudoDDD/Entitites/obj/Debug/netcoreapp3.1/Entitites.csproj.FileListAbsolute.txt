@@ -1,0 +1,9 @@
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Entitites\bin\Debug\netcoreapp3.1\Entitites.deps.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Entitites\bin\Debug\netcoreapp3.1\Entitites.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Entitites\bin\Debug\netcoreapp3.1\Entitites.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Entitites\obj\Debug\netcoreapp3.1\Entitites.AssemblyInfoInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Entitites\obj\Debug\netcoreapp3.1\Entitites.AssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Entitites\obj\Debug\netcoreapp3.1\Entitites.csproj.CoreCompileInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Entitites\obj\Debug\netcoreapp3.1\Entitites.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Entitites\obj\Debug\netcoreapp3.1\Entitites.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\DDD\EstudoDDD\Entitites\obj\Debug\netcoreapp3.1\Entitites.csprojAssemblyReference.cache
