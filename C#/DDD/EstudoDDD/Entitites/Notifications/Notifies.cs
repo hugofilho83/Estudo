@@ -43,7 +43,23 @@ namespace Entitites.Notifications
             {
                 Notitys.Add(new Notifies
                 {
-                    Messeger = "Campo Obrigatório",
+                    Messeger = "Valor deve ser maior que 0",
+                    NameProperty = nameProperty
+                });
+
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool ValidationPropertyDecimal(decimal value, string nameProperty)
+        {
+            if (value < 1 || string.IsNullOrWhiteSpace(NameProperty))
+            {
+                Notitys.Add(new Notifies
+                {
+                    Messeger = "Valor deve ser maior que 0",
                     NameProperty = nameProperty
                 });
 

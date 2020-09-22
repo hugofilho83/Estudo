@@ -1,0 +1,12 @@
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\bin\Debug\netcoreapp2.0\Id.Overview.MVC.deps.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\bin\Debug\netcoreapp2.0\Id.Overview.MVC.runtimeconfig.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\bin\Debug\netcoreapp2.0\Id.Overview.MVC.runtimeconfig.dev.json
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\bin\Debug\netcoreapp2.0\Id.Overview.MVC.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\bin\Debug\netcoreapp2.0\Id.Overview.MVC.pdb
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\obj\Debug\netcoreapp2.0\Id.Overview.MVC.csprojAssemblyReference.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\obj\Debug\netcoreapp2.0\Id.Overview.MVC.csproj.CoreCompileInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\obj\Debug\netcoreapp2.0\Id.Overview.MVC.AssemblyInfoInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\obj\Debug\netcoreapp2.0\Id.Overview.MVC.AssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\obj\Debug\netcoreapp2.0\Id.Overview.MVC.dll
+D:\Projetos\C#\EstudoTDD\Estudo\C#\IdentityOverView\Id.Overview.MVC\obj\Debug\netcoreapp2.0\Id.Overview.MVC.pdb

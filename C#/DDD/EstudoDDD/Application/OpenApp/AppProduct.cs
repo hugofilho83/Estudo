@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Interfaces.InterfaceProduct;
+using Domain.Interfaces.InterfaceServices;
 using Entitites.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,36 +11,38 @@ namespace Application.OpenApp
 {
     public class AppProduct : IProductApp
     {
-        private IProduct product;
+        private IProduct _product;
+        private IServiceProduct _serviceProduct;
 
-        public AppProduct(IProduct product)
+        public AppProduct(IProduct product, IServiceProduct serviceProduct)
         {
-            this.product = product;
+            _product = product;
+            _serviceProduct = serviceProduct;
         }
 
         public async Task Add(Product objeto)
         {
-            await this.product.Add(objeto);
+            await _product.Add(objeto);
         }
 
         public async Task Delete(Product objeto)
         {
-            await this.product.Delete(objeto);
+            await _product.Delete(objeto);
         }
 
         public async Task<Product> GetEntityById(int Id)
         {
-            return await this.product.GetEntityById(Id);
+            return await _product.GetEntityById(Id);
         }
 
         public async Task<List<Product>> List()
         {
-            return await this.product.List();
+            return await _product.List();
         }
 
         public async Task Update(Product objeto)
         {
-            await this.product.Update(objeto);
+            await _product.Update(objeto);
         }
     }
 }
