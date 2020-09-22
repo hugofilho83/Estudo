@@ -5,153 +5,139 @@
   text-decoration: none;
   font-family: sans-serif;
   font-size: 14px;
+  color: black;
 }
 
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(243, 243, 243);
+  background-color: #f0f2f5;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
 }
 
-.instagram-wrapper {
+.wrapper {
   display: flex;
   align-items: center;
-  justify-content: start;
-  width: 50%;
-  max-width: 650px; /*coloquei essa propriedade por que o meu monitor é muito grando estava deixando os instagram-continue muito largo */
-  height: 100vh;
-}
-
-.instagram-phone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-}
-
-.instagram-phone img {
-  width: 80%;
-}
-
-.instagram-continue {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  width: 50%;
-  min-height: 34rem;
-}
-
-.group {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  height: 100vh;
+  width: 75%;
+  max-width: 1300px;
+  min-height: 630px;
+}
+
+.slogan {
+  display: flex;
   flex-direction: column;
+  width: 75%;
+}
+
+.slogan img {
+  width: 22rem;
+  margin-left: -28px;
+}
+
+.slogan p {
+  font-size: 29px;
+  width: 90%;
+}
+
+.container-login {
+  align-items: center;
+  width: 50%;
+  height: 350px;
+  width: 440px;
+}
+
+.area-login {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  position: relative;
+  border-radius: 10px;
   background-color: #ffffff;
   width: 100%;
-  padding: 1.3rem 0;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.area-login input {
+  padding: 14px 16px;
   border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-bottom: 10px;
 }
 
-.group:nth-child(1) {
-  min-height: 19rem;
-}
-
-.instagram-logo {
-  height: 3rem;
-}
-
-.profile-photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.profile-photo img {
-  height: 6rem;
-}
-
-.instagram-login {
-  background-color: #0095f6;
+.area-login button {
+  background-color: #1877f2;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 0 16px;
   color: #ffffff;
-  padding: 8px;
-  border-radius: 4px;
+  outline: none;
 }
 
-.instagram-logout {
-  color: #0095f6;
-  margin-top: 1rem;
+.area-login button:hover {
+  background-color: #166fe5;
 }
 
-.not-account {
-  color: rgb(160, 160, 160);
+.area-login p {
+  margin: 20px;
+  text-align: center;
 }
 
-.link-blue {
-  color: #0095f6;
+.area-login p a {
+  color: #1877f2;
 }
 
-.get-the-app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 1.3rem 0;
+.area-login hr {
+  border: none;
+  border-bottom: 1px solid #dadde1;
 }
 
-.download {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+.criate-account {
+  background-color: #42b72a;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 48px;
+  padding: 0 16px;
+  color: #ffffff;
+  width: 160px;
+  margin-top: 30px;
+  align-self: center;
+}
+.criate-account:hover {
+  background-color: #36a420;
 }
 
-.app-download {
-  height: 3rem;
-  width: 10rem;
-  background-size: cover;
-}
-
-.app-download:nth-child(1) {
-  background-image: url("./assest/button-apple.png");
-}
-
-.app-download:nth-child(2) {
-  background-image: url("./assest/button-google.png");
-}
-
-@media (max-width: 1024px) {
-  .instagram-wrapper {
-    width: 90%;
-  }
+.create-page {
+  margin-top: 40px;
 }
 
 @media (max-width: 650px) {
-  body {
-    background-color: #ffffff;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .instagram-wrapper {
-    width: 90%;
+  .slogan {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
   }
 
-  .instagram-phone {
+  .slogan p {
     display: none;
   }
 
-  .instagram-continue {
+  .container-login {
     width: 100%;
-  }
-
-  .group {
-    border: 1px solid transparent;
   }
 }
