@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "NOTEBOOK MAC PRO",
+      "price": 12000
+    },
+    {
+      "id": 3,
+      "name": "SAMSUNG S20+",
+      "price": "6522.49"
+    },
+    {
+      "name": "GELADEIRA",
+      "price": "1800",
+      "id": 4
+    },
+    {
+      "name": "MESA P/ ESCRITORIO",
+      "price": "3500",
+      "id": 6
+    },
+    {
+      "name": "CANETA BIC PRETA",
+      "price": "1.50",
+      "id": 7
+    }
+  ]
+}
