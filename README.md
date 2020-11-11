@@ -19,7 +19,7 @@ Repositório para armazenar os artefatos gerado durante os estudos.
 4. Java
    
 * Leitor Código de Barras  e QRCode [zxing](https://github.com/zxing/zxing) (android)
-   
+  
 5. Flutter
    
    * Calculadora
@@ -27,10 +27,10 @@ Repositório para armazenar os artefatos gerado durante os estudos.
 6. Angular_9
 
    * DIO (Digital Innovation One)
-     * Projeto para cadastro de Cursos 
+     * Projeto para cadastro de Cursos (Front-End(Angular_9) Back-End(Node.js(dados mockados)))
 
    * Cod3r
-     * Projeto para cadastro de Produtos
+     * Projeto para cadastro de Produtos (Front-End(Angular_9) Back-End(json-server))
 
    
 
