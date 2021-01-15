@@ -1,6 +1,5 @@
 D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\bin\Debug\netcoreapp3.1\appsettings.json
-D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\bin\Debug\netcoreapp3.1\ApiCF.exe
 D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\bin\Debug\netcoreapp3.1\ApiCF.deps.json
 D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\bin\Debug\netcoreapp3.1\ApiCF.runtimeconfig.json
@@ -63,3 +62,4 @@ D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\bin\Debug\netc
 D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.dll
 D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
 D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\obj\Debug\netcoreapp3.1\ApiCF.MvcApplicationPartsAssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinaneiro\Servidor\Api\obj\Debug\netcoreapp3.1\scopedcss\bundle\ApiCF.styles.css
