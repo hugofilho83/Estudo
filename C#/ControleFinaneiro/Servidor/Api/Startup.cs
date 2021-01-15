@@ -19,89 +19,83 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace ApiCF
 {
-  public class Startup
-  {
-
-    public Startup(IConfiguration configuration)
-    {
-      Configuration = configuration;
-    }
-
-    public IConfiguration Configuration { get; }
-
-    // This method gets called by the runtime. Use this method to add services to the container.
-    public void ConfigureServices(IServiceCollection services)
+    public class Startup
     {
 
-      services.Configure<ToKenService>(Configuration.GetSection("TokenService"));
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
 
-      services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
-         Configuration.GetConnectionString("ConnetionStringDev")
-     ));
+        public IConfiguration Configuration { get; }
 
-      services.AddCors();
-      services.AddControllers();
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
 
-      var key = Encoding.ASCII.GetBytes(ServiceConfig.Secret);
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
+              Configuration.GetConnectionString("ConnetionStringDev")
+            ));
 
-      services.AddAuthentication(x =>
-      {
-        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-      })
-          .AddJwtBearer(x =>
-          {
-            x.RequireHttpsMetadata = false;
-            x.SaveToken = true;
-            x.TokenValidationParameters = new TokenValidationParameters
+            services.AddCors();
+            services.AddControllers();
+
+            var key = Encoding.ASCII.GetBytes(ServiceConfig.Secret);
+
+            services.AddAuthentication(x =>
             {
-              ValidateIssuerSigningKey = true,
-              IssuerSigningKey = new SymmetricSecurityKey(key),
-              ValidateIssuer = false,
-              ValidateAudience = false
-            };
-          });
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
 
-      services.AddApiVersioning(options =>
-      {
-        options.DefaultApiVersion = new ApiVersion(1, 0);
-        options.ReportApiVersions = true;
-        options.AssumeDefaultVersionWhenUnspecified = true;
-      });
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-      services.AddVersionedApiExplorer(options =>
-      {
-        options.GroupNameFormat = "'v'VVV";
-        options.SubstituteApiVersionInUrl = true;
-      });
+            services.AddApiVersioning(options =>
+            {
+                options.DefaultApiVersion = new ApiVersion(1, 0);
+                options.ReportApiVersions = true;
+                options.AssumeDefaultVersionWhenUnspecified = true;
+            });
+
+            services.AddVersionedApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'VVV";
+                options.SubstituteApiVersionInUrl = true;
+            });
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+            app.UseAuthentication();
+            app.UseAuthorization();                       
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+        }
     }
-
-    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-      if (env.IsDevelopment())
-      {
-        app.UseDeveloperExceptionPage();
-      }
-
-      app.UseHttpsRedirection();
-
-      app.UseRouting();
-
-      app.UseCors(x =>
-         x.AllowAnyOrigin()
-         .AllowAnyMethod()
-         .AllowAnyHeader()
-      );
-
-      app.UseAuthorization();
-
-      app.UseAuthentication();
-
-      app.UseEndpoints(endpoints =>
-      {
-        endpoints.MapControllers();
-      });
-    }
-  }
 }

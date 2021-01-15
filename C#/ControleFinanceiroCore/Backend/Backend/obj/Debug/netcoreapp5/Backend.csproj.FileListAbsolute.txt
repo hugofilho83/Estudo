@@ -1,0 +1,6 @@
+D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinanceiroCore\Backend\Backend\obj\Debug\netcoreapp5\Backend.csprojAssemblyReference.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinanceiroCore\Backend\Backend\obj\Debug\netcoreapp5\Backend.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinanceiroCore\Backend\Backend\obj\Debug\netcoreapp5\Backend.AssemblyInfoInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinanceiroCore\Backend\Backend\obj\Debug\netcoreapp5\Backend.AssemblyInfo.cs
+D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinanceiroCore\Backend\Backend\obj\Debug\netcoreapp5\Backend.csproj.CoreCompileInputs.cache
+D:\Projetos\C#\EstudoTDD\Estudo\C#\ControleFinanceiroCore\Backend\Backend\obj\Debug\netcoreapp5\Backend.MvcApplicationPartsAssemblyInfo.cache

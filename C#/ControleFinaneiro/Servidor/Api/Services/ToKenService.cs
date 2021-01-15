@@ -19,25 +19,23 @@ namespace Api.Services
 
       var tokenDescriptor = new SecurityTokenDescriptor
       {
-        Subject = new ClaimsIdentity(
-          new Claim[] {
-                new Claim (ClaimTypes.Name, usuario.Name.ToString ()),
-                new Claim (ClaimTypes.Sid, usuario.Id.ToString ())
-          }
-          ),
+        Subject = new ClaimsIdentity(new Claim[] 
+        {
+            new Claim (ClaimTypes.Name, usuario.Name.ToString ()),
+            new Claim (ClaimTypes.Sid, usuario.Id.ToString ())
+        }),
 
         Expires = expiresAt,
 
         SigningCredentials = new SigningCredentials(
           new SymmetricSecurityKey(key),
-          SecurityAlgorithms.HmacSha256Signature
-          )
-
+                SecurityAlgorithms.HmacSha256Signature
+        )
       };
 
       var token = tokenHandler.CreateToken(tokenDescriptor);
-      return tokenHandler.WriteToken(token);
 
+      return tokenHandler.WriteToken(token);
     }
   }
 }
