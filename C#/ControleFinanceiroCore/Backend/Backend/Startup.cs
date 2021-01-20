@@ -1,20 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO.Compression;
 using System.Text;
-using System.Threading.Tasks;
+using Backend.Models;
+using Backend.Repository;
 using Backend.Repository.Context;
+using Backend.Repository.Contract;
 using Backend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Backend {
@@ -31,10 +30,22 @@ namespace Backend {
             var ConnectionString = Configuration.GetConnectionString ("ConnetionStringDev");
             services.AddDbContext<DataBaseContext> (option => option.UseNpgsql (ConnectionString));
 
+            //Configura o modo de compressão
+            services.Configure<GzipCompressionProviderOptions>(
+                options => options.Level = CompressionLevel.Optimal);
+            services.AddResponseCompression(options =>
+            {
+                options.Providers.Add<GzipCompressionProvider>();
+                options.EnableForHttps = true;
+            });
+
             services.AddCors ();
             services.AddControllers ();
 
-            var key = Encoding.ASCII.GetBytes (new Configurations ().GetKeyToken ());
+            services.AddScoped (typeof (IUsuarioRepository<Usuario>), typeof (UsuarioRepository));
+
+            var key = Encoding.ASCII.GetBytes (Configurations.GetKeyToken());
+
             services.AddAuthentication (x => {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -49,7 +60,7 @@ namespace Backend {
                 };
             });
 
-            services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_1);
+            services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_3_0);
 
             services.AddApiVersioning (options => {
                 options.DefaultApiVersion = new ApiVersion (1, 0);

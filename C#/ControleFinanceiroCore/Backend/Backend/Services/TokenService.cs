@@ -8,9 +8,9 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Backend.Services {
     public class TokenService {
-        public static string GenerateToken (Usuario usuario) {
+        public static string GenerateToken (Usuario usuario,  DateTime expire) {
             var tokenHandler = new JwtSecurityTokenHandler ();
-            var key = Encoding.ASCII.GetBytes (new Configurations ().GetKeyToken ());
+            var key = Encoding.ASCII.GetBytes (Configurations.GetKeyToken());
 
             var tokenDescriptor = new SecurityTokenDescriptor {
                 Subject = new ClaimsIdentity (new Claim[] {
@@ -18,7 +18,7 @@ namespace Backend.Services {
                 new Claim (ClaimTypes.Sid, usuario.Id.ToString ())
                 }),
 
-                Expires = DateTime.Now.AddMinutes (5),
+                Expires = expire,
 
                 SigningCredentials = new SigningCredentials (
                 new SymmetricSecurityKey (key),
