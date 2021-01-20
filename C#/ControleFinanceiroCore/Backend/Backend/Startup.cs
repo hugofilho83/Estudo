@@ -43,6 +43,8 @@ namespace Backend {
             services.AddControllers ();
 
             services.AddScoped (typeof (IUsuarioRepository<Usuario>), typeof (UsuarioRepository));
+            services.AddScoped(typeof(IContaReceitaRepository<ContaReceita>), typeof(ContaReceitaRepository));
+            services.AddScoped(typeof(IContaDespesaRepository<ContaDespesa>), typeof(ContaDespesaRepository));
 
             var key = Encoding.ASCII.GetBytes (Configurations.GetKeyToken());
 

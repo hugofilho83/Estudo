@@ -21,7 +21,7 @@ namespace Backend.Controllers
     [Produces("application/json")]
     public class UsuarioController : ControllerBase
     {
-        private IUsuarioRepository<Usuario> _repository;
+        private readonly IUsuarioRepository<Usuario> _repository;
         public UsuarioController(IUsuarioRepository<Usuario> repository)
         {
             _repository = repository;

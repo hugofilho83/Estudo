@@ -1,6 +1,7 @@
 ﻿using Backend.Models;
 using Backend.Repository.Context;
 using Backend.Repository.Contract;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,12 @@ namespace Backend.Repository
         {
             ValidarConta(Entity);
 
-            _dataBase.ContaReceita.Add(Entity);
-            await _dataBase.SaveChangesAsync();
+            if (Entity.Notifications.Count == 0)
+            {
+                Entity.Ativo = true;
+                _dataBase.ContaReceita.Add(Entity);
+                await _dataBase.SaveChangesAsync();
+            }
         }
 
         public Task Delete(ContaReceita Entity)
@@ -28,19 +33,34 @@ namespace Backend.Repository
             throw new NotImplementedException();
         }
 
-        public Task<ContaReceita> GetEntityById(int Id)
+        public async Task<ContaReceita> GetEntityById(int Id)
         {
-            throw new NotImplementedException();
+            return await _dataBase.ContaReceita.FindAsync(Id);
         }
 
-        public Task<List<ContaReceita>> List()
+        public async Task<List<ContaReceita>> List()
         {
-            throw new NotImplementedException();
+            return await _dataBase.ContaReceita.AsNoTracking().OrderBy(c=>c.Id).ToListAsync();
         }
 
-        public Task Update(ContaReceita Entity)
+        public async Task Update(ContaReceita Entity)
         {
-            throw new NotImplementedException();
+            ValidarConta(Entity);
+
+            if (Entity.Notifications.Count > 0) 
+            {
+                return;
+            }
+
+            ContaReceita conta = _dataBase.ContaReceita.Where(c => c.Id == Entity.Id).FirstOrDefault();
+
+            conta.Codigo = Entity.Codigo;
+            conta.Descricao = Entity.Descricao;
+            conta.Ativo = Entity.Ativo;
+
+            _dataBase.Update(conta);
+
+            await _dataBase.SaveChangesAsync();
         }
 
         private void ValidarConta(ContaReceita contaReceita) 

@@ -35,7 +35,7 @@ namespace Backend.Repository {
         }
 
         public async Task<List<Usuario>> List () {
-            return await _dataBase.Usuarios.ToListAsync ();
+            return await _dataBase.Usuarios.AsNoTracking().OrderBy(u=>u.Id).ToListAsync ();
         }
 
         public async Task Update (Usuario Entity) {
