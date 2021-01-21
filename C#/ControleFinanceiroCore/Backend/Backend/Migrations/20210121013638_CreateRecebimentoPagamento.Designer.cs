@@ -3,20 +3,21 @@ using System;
 using Backend.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Backend.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20210121013638_CreateRecebimentoPagamento")]
+    partial class CreateRecebimentoPagamento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .UseIdentityByDefaultColumns()
-                .HasAnnotation("Relational:Collation", "Portuguese_Brazil.1252")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.2");
 
@@ -95,11 +96,11 @@ namespace Backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex(new[] { "ContaId" }, "IX_LancamentosDespesas_ContaId");
+                    b.HasIndex("ContaId");
 
-                    b.HasIndex(new[] { "SitucaoLancamentoId" }, "IX_LancamentosDespesas_SitucaoLancamentoId");
+                    b.HasIndex("SitucaoLancamentoId");
 
-                    b.HasIndex(new[] { "UsuarioId" }, "IX_LancamentosDespesas_UsuarioId");
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("LancamentosDespesas");
                 });
@@ -110,9 +111,6 @@ namespace Backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .UseIdentityByDefaultColumn();
-
-                    b.Property<int?>("ContaId")
-                        .HasColumnType("integer");
 
                     b.Property<DateTime>("DataDespesa")
                         .HasColumnType("timestamp without time zone");
@@ -135,49 +133,21 @@ namespace Backend.Migrations
                     b.Property<decimal>("Valor")
                         .HasColumnType("numeric");
 
+                    b.Property<int?>("contaId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
-                    b.HasIndex(new[] { "ContaId" }, "IX_LancamentosReceitas_ContaId");
+                    b.HasIndex("SitucaoLancamentoId");
 
-                    b.HasIndex(new[] { "SitucaoLancamentoId" }, "IX_LancamentosReceitas_SitucaoLancamentoId");
+                    b.HasIndex("UsuarioId");
 
-                    b.HasIndex(new[] { "UsuarioId" }, "IX_LancamentosReceitas_UsuarioId");
+                    b.HasIndex("contaId");
 
                     b.ToTable("LancamentosReceitas");
                 });
 
             modelBuilder.Entity("Backend.Models.PagamentoDespesa", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .UseIdentityByDefaultColumn();
-
-                    b.Property<int?>("ContaId")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime?>("DataPagto")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<string>("Historico")
-                        .HasColumnType("text");
-
-                    b.Property<int?>("ParcelaId")
-                        .HasColumnType("integer");
-
-                    b.Property<decimal?>("ValorPago")
-                        .HasColumnType("numeric");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex(new[] { "ContaId" }, "IX_PagamentoDespesas_ContaId");
-
-                    b.HasIndex(new[] { "ParcelaId" }, "IX_PagamentoDespesas_ParcelaId");
-
-                    b.ToTable("PagamentoDespesas");
-                });
-
-            modelBuilder.Entity("Backend.Models.ParcelaDespesa", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -196,27 +166,24 @@ namespace Backend.Migrations
                     b.Property<int>("Parcela")
                         .HasColumnType("integer");
 
-                    b.Property<decimal>("Valor")
-                        .HasColumnType("numeric");
-
                     b.Property<decimal>("ValorPago")
                         .HasColumnType("numeric");
 
                     b.HasKey("Id");
 
-                    b.HasIndex(new[] { "LancamentoId" }, "IX_ParcelaDespesa_LancamentoId");
+                    b.HasIndex("LancamentoId");
 
-                    b.ToTable("ParcelaDespesa");
+                    b.ToTable("PagamentoDespesas");
                 });
 
-            modelBuilder.Entity("Backend.Models.ParcelaReceita", b =>
+            modelBuilder.Entity("Backend.Models.RecebimentoReceita", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .UseIdentityByDefaultColumn();
 
-                    b.Property<DateTime?>("DataRecebido")
+                    b.Property<DateTime>("DataPagto")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Historico")
@@ -228,41 +195,12 @@ namespace Backend.Migrations
                     b.Property<int>("Parcela")
                         .HasColumnType("integer");
 
-                    b.Property<decimal>("Valor")
-                        .HasColumnType("numeric");
-
-                    b.Property<decimal?>("ValorRecebido")
-                        .HasColumnType("numeric");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex(new[] { "LancamentoId" }, "IX_ParcelaReceitas_LancamentoId");
-
-                    b.ToTable("ParcelaReceitas");
-                });
-
-            modelBuilder.Entity("Backend.Models.RecebimentoReceita", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .UseIdentityByDefaultColumn();
-
-                    b.Property<DateTime>("DataReceb")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<string>("Historico")
-                        .HasColumnType("text");
-
-                    b.Property<int?>("ParcelaReceitaId")
-                        .HasColumnType("integer");
-
                     b.Property<decimal>("ValorPago")
                         .HasColumnType("numeric");
 
                     b.HasKey("Id");
 
-                    b.HasIndex(new[] { "ParcelaReceitaId" }, "IX_RecebimentoReceitas_ParcelaReceitaId");
+                    b.HasIndex("LancamentoId");
 
                     b.ToTable("RecebimentoReceitas");
                 });
@@ -333,16 +271,15 @@ namespace Backend.Migrations
             modelBuilder.Entity("Backend.Models.LancamentosDespesa", b =>
                 {
                     b.HasOne("Backend.Models.ContaDespesa", "Conta")
-                        .WithMany("LancamentosDespesas")
+                        .WithMany()
                         .HasForeignKey("ContaId");
 
                     b.HasOne("Backend.Models.SituacaoLancamentoDespesa", "SitucaoLancamento")
-                        .WithMany("LancamentosDespesas")
-                        .HasForeignKey("SitucaoLancamentoId")
-                        .HasConstraintName("FK_LancamentosDespesas_SituacaoLancamentoDesposa_SitucaoLancam~");
+                        .WithMany()
+                        .HasForeignKey("SitucaoLancamentoId");
 
                     b.HasOne("Backend.Models.Usuario", "Usuario")
-                        .WithMany("LancamentosDespesas")
+                        .WithMany()
                         .HasForeignKey("UsuarioId");
 
                     b.Navigation("Conta");
@@ -354,20 +291,19 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.LancamentosReceita", b =>
                 {
-                    b.HasOne("Backend.Models.ContaReceita", "Conta")
-                        .WithMany("LancamentosReceita")
-                        .HasForeignKey("ContaId");
-
                     b.HasOne("Backend.Models.SituacaoLancamentoReceita", "SitucaoLancamento")
-                        .WithMany("LancamentosReceita")
-                        .HasForeignKey("SitucaoLancamentoId")
-                        .HasConstraintName("FK_LancamentosReceitas_SituacaoLancamentoReceita_SitucaoLancam~");
+                        .WithMany()
+                        .HasForeignKey("SitucaoLancamentoId");
 
                     b.HasOne("Backend.Models.Usuario", "Usuario")
-                        .WithMany("LancamentosReceita")
+                        .WithMany()
                         .HasForeignKey("UsuarioId");
 
-                    b.Navigation("Conta");
+                    b.HasOne("Backend.Models.ContaReceita", "conta")
+                        .WithMany()
+                        .HasForeignKey("contaId");
+
+                    b.Navigation("conta");
 
                     b.Navigation("SitucaoLancamento");
 
@@ -376,32 +312,8 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.PagamentoDespesa", b =>
                 {
-                    b.HasOne("Backend.Models.ContaReceita", "Conta")
-                        .WithMany("PagamentoDespesas")
-                        .HasForeignKey("ContaId");
-
-                    b.HasOne("Backend.Models.ParcelaDespesa", "Parcela")
-                        .WithMany("PagamentoDespesas")
-                        .HasForeignKey("ParcelaId");
-
-                    b.Navigation("Conta");
-
-                    b.Navigation("Parcela");
-                });
-
-            modelBuilder.Entity("Backend.Models.ParcelaDespesa", b =>
-                {
                     b.HasOne("Backend.Models.LancamentosDespesa", "Lancamento")
-                        .WithMany("ParcelaDespesas")
-                        .HasForeignKey("LancamentoId");
-
-                    b.Navigation("Lancamento");
-                });
-
-            modelBuilder.Entity("Backend.Models.ParcelaReceita", b =>
-                {
-                    b.HasOne("Backend.Models.LancamentosReceita", "Lancamento")
-                        .WithMany("ParcelaReceita")
+                        .WithMany()
                         .HasForeignKey("LancamentoId");
 
                     b.Navigation("Lancamento");
@@ -409,60 +321,11 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Backend.Models.RecebimentoReceita", b =>
                 {
-                    b.HasOne("Backend.Models.ParcelaReceita", "ParcelaReceita")
-                        .WithMany("RecebimentoReceita")
-                        .HasForeignKey("ParcelaReceitaId");
+                    b.HasOne("Backend.Models.LancamentosReceita", "Lancamento")
+                        .WithMany()
+                        .HasForeignKey("LancamentoId");
 
-                    b.Navigation("ParcelaReceita");
-                });
-
-            modelBuilder.Entity("Backend.Models.ContaDespesa", b =>
-                {
-                    b.Navigation("LancamentosDespesas");
-                });
-
-            modelBuilder.Entity("Backend.Models.ContaReceita", b =>
-                {
-                    b.Navigation("LancamentosReceita");
-
-                    b.Navigation("PagamentoDespesas");
-                });
-
-            modelBuilder.Entity("Backend.Models.LancamentosDespesa", b =>
-                {
-                    b.Navigation("ParcelaDespesas");
-                });
-
-            modelBuilder.Entity("Backend.Models.LancamentosReceita", b =>
-                {
-                    b.Navigation("ParcelaReceita");
-                });
-
-            modelBuilder.Entity("Backend.Models.ParcelaDespesa", b =>
-                {
-                    b.Navigation("PagamentoDespesas");
-                });
-
-            modelBuilder.Entity("Backend.Models.ParcelaReceita", b =>
-                {
-                    b.Navigation("RecebimentoReceita");
-                });
-
-            modelBuilder.Entity("Backend.Models.SituacaoLancamentoDespesa", b =>
-                {
-                    b.Navigation("LancamentosDespesas");
-                });
-
-            modelBuilder.Entity("Backend.Models.SituacaoLancamentoReceita", b =>
-                {
-                    b.Navigation("LancamentosReceita");
-                });
-
-            modelBuilder.Entity("Backend.Models.Usuario", b =>
-                {
-                    b.Navigation("LancamentosDespesas");
-
-                    b.Navigation("LancamentosReceita");
+                    b.Navigation("Lancamento");
                 });
 #pragma warning restore 612, 618
         }

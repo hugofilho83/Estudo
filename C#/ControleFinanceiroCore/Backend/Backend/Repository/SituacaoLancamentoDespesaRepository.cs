@@ -37,12 +37,12 @@ namespace Backend.Repository
 
         public async Task<SituacaoLancamentoDespesa> GetEntityById(int Id)
         {
-            return await _dataBase.SituacaoLancamentoDesposa.FindAsync(Id);
+            return await _dataBase.SituacaoLancamentoDesposas.FindAsync(Id);
         }
 
         public async Task<List<SituacaoLancamentoDespesa>> List()
         {
-            return await _dataBase.SituacaoLancamentoDesposa.AsNoTracking().OrderBy(s=> s.Id).ToListAsync();
+            return await _dataBase.SituacaoLancamentoDesposas.AsNoTracking().OrderBy(s=> s.Id).ToListAsync();
         }
 
         public async Task Update(SituacaoLancamentoDespesa Entity)
@@ -52,7 +52,7 @@ namespace Backend.Repository
             if (Entity.Notifications.Count > 0)
                 return;
 
-            var Situacao = _dataBase.SituacaoLancamentoDesposa.Find(Entity.Id);
+            var Situacao = _dataBase.SituacaoLancamentoDesposas.Find(Entity.Id);
 
             Situacao.Codigo = Entity.Codigo;
             Situacao.Descricao = Entity.Descricao;

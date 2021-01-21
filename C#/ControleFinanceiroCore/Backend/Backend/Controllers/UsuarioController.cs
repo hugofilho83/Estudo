@@ -44,6 +44,7 @@ namespace Backend.Controllers
             return usuario;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] Usuario model)
         {

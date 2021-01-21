@@ -14,6 +14,16 @@ namespace Backend.Services {
             return strCnn;
         }
 
+
+        public static string ConnectionString()
+        {
+            JToken jAppSettings = JToken.Parse(File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "appsettings.json")));
+
+            string strCnn = jAppSettings["ConnectionStrings"]["ConnetionStringDev"].ToString();
+
+            return strCnn;
+        }
+
         public static string RetornarMD5(string Senha)
         {
             using (MD5 md5Hash = MD5.Create())

@@ -36,12 +36,12 @@ namespace Backend.Repository
 
         public async Task<ContaDespesa> GetEntityById(int Id)
         {
-            return await _dataBase.ContaDespesa.FindAsync(Id);
+            return await _dataBase.ContaDespesas.FindAsync(Id);
         }
 
         public async Task<List<ContaDespesa>> List()
         {
-            return await _dataBase.ContaDespesa.AsNoTracking().OrderBy(c=> c.Id).ToListAsync();
+            return await _dataBase.ContaDespesas.AsNoTracking().OrderBy(c=> c.Id).ToListAsync();
         }
 
         public async Task Update(ContaDespesa Entity)
@@ -53,7 +53,7 @@ namespace Backend.Repository
                 return;
             }
 
-            ContaDespesa conta = _dataBase.ContaDespesa.Find(Entity.Id);
+            ContaDespesa conta = _dataBase.ContaDespesas.Find(Entity.Id);
 
             conta.Codigo = Entity.Codigo;
             conta.Descricao = Entity.Descricao;

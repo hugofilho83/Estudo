@@ -1,13 +1,19 @@
+﻿using System;
 using Backend.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Backend.Repository.Context {
-    public partial class DataBaseContext : DbContext {
-        public DataBaseContext()
+#nullable disable
+
+namespace Backend
+{
+    public partial class dbcontrolfinanceiroContext : DbContext
+    {
+        public dbcontrolfinanceiroContext()
         {
         }
 
-        public DataBaseContext(DbContextOptions<dbcontrolfinanceiroContext> options)
+        public dbcontrolfinanceiroContext(DbContextOptions<dbcontrolfinanceiroContext> options)
             : base(options)
         {
         }
