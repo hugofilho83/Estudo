@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace Backend.Repository
 {
-    public class SituacaoLancamentoReceitaRepository : ISituacaoLancamentoReceitaRepository<SituacaoLancamentoReceita>
+    public class SituacaoLancamentoDespesaRepository : ISituacaoLancamentoDespesaRepository<SituacaoLancamentoDespesa>
     {
         private readonly DataBaseContext _dataBase;
 
-        public SituacaoLancamentoReceitaRepository(DataBaseContext dataBase)
+        public SituacaoLancamentoDespesaRepository(DataBaseContext dataBase)
         {
             _dataBase = dataBase;
         }
 
-        public async Task Add(SituacaoLancamentoReceita Entity)
+        public async Task Add(SituacaoLancamentoDespesa Entity)
         {
             ValidarEntity(Entity);
 
@@ -30,29 +30,29 @@ namespace Backend.Repository
             }
         }
 
-        public Task Delete(SituacaoLancamentoReceita Entity)
+        public Task Delete(SituacaoLancamentoDespesa Entity)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<SituacaoLancamentoReceita> GetEntityById(int Id)
+        public async Task<SituacaoLancamentoDespesa> GetEntityById(int Id)
         {
-            return await _dataBase.SituacaoLancamentoReceita.FindAsync(Id);
+            return await _dataBase.SituacaoLancamentoDesposa.FindAsync(Id);
         }
 
-        public async Task<List<SituacaoLancamentoReceita>> List()
+        public async Task<List<SituacaoLancamentoDespesa>> List()
         {
-            return await _dataBase.SituacaoLancamentoReceita.AsNoTracking().OrderBy(s=> s.Id).ToListAsync();
+            return await _dataBase.SituacaoLancamentoDesposa.AsNoTracking().OrderBy(s=> s.Id).ToListAsync();
         }
 
-        public async Task Update(SituacaoLancamentoReceita Entity)
+        public async Task Update(SituacaoLancamentoDespesa Entity)
         {
             ValidarEntity(Entity);
 
             if (Entity.Notifications.Count > 0)
                 return;
 
-            var Situacao = _dataBase.SituacaoLancamentoReceita.Find(Entity.Id);
+            var Situacao = _dataBase.SituacaoLancamentoDesposa.Find(Entity.Id);
 
             Situacao.Codigo = Entity.Codigo;
             Situacao.Descricao = Entity.Descricao;
@@ -62,7 +62,7 @@ namespace Backend.Repository
             await _dataBase.SaveChangesAsync();
         }
 
-        private void ValidarEntity(SituacaoLancamentoReceita Entity)
+        private void ValidarEntity(SituacaoLancamentoDespesa Entity)
         {
             Entity.ValidationPropertyInteger(Entity.Codigo, nameof(Entity.Codigo));
             Entity.ValidationPropertyString(Entity.Descricao, nameof(Entity.Descricao));

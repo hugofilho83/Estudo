@@ -10,6 +10,6 @@ namespace Backend.Models {
         public int Parcela { get; set; }
         public int TotalParcela { get; set; }
         public decimal Valor { get; set; }
-        public SitaucaoLancamentoDespesa SitucaoLancamento { get; set; }
+        public SituacaoLancamentoDespesa SitucaoLancamento { get; set; }
     }
 }

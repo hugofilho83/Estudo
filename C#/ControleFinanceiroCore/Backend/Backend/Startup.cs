@@ -42,9 +42,11 @@ namespace Backend {
             services.AddCors ();
             services.AddControllers ();
 
-            services.AddScoped (typeof (IUsuarioRepository<Usuario>), typeof (UsuarioRepository));
+            services.AddScoped(typeof(IUsuarioRepository<Usuario>), typeof (UsuarioRepository));
             services.AddScoped(typeof(IContaReceitaRepository<ContaReceita>), typeof(ContaReceitaRepository));
             services.AddScoped(typeof(IContaDespesaRepository<ContaDespesa>), typeof(ContaDespesaRepository));
+            services.AddScoped(typeof(ISituacaoLancamentoReceitaRepository<SituacaoLancamentoReceita>), typeof(SituacaoLancamentoReceitaRepository));
+            services.AddScoped(typeof(ISituacaoLancamentoDespesaRepository<SituacaoLancamentoDespesa>), typeof(SituacaoLancamentoDespesaRepository));
 
             var key = Encoding.ASCII.GetBytes (Configurations.GetKeyToken());
 
