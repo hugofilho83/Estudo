@@ -1,6 +1,7 @@
 ﻿using Backend.Models.Notifications;
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 #nullable disable
 
@@ -17,6 +18,7 @@ namespace Backend.Models
         public int Codigo { get; set; }
         public string Descricao { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<LancamentosDespesa> LancamentosDespesas { get; set; }
     }
 }

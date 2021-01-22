@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
@@ -26,6 +27,22 @@ namespace Backend.Models.Notifications {
             return true;
         }
 
+        public bool ValidationPropertyInteger(int? Value, string NameProperty)
+        {
+            if (Value == null || string.IsNullOrWhiteSpace(NameProperty))
+            {
+                Notifications.Add(new Notify
+                {
+                    Messager = "Campo Obrigatorio",
+                    NameProperty = NameProperty
+                });
+
+                return false;
+            }
+
+            return true;
+        }
+
         public bool ValidationPropertyInteger (int Value, string NameProperty) {
             if (Value < 1 || string.IsNullOrWhiteSpace (NameProperty)) {
                 Notifications.Add (new Notify
@@ -46,6 +63,38 @@ namespace Backend.Models.Notifications {
                 {
                     Messager = "Campo Obrigatorio ",
                         NameProperty = NameProperty
+                });
+
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool ValidationPropertyDateTime(DateTime? Value, string NameProperty)
+        {
+            if (Value == DateTime.MinValue || string.IsNullOrWhiteSpace(NameProperty))
+            {
+                Notifications.Add(new Notify
+                {
+                    Messager = "Campo Obrigatorio ",
+                    NameProperty = NameProperty
+                });
+
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool ValidationPropertyDateTime(DateTime Value, string NameProperty)
+        {
+            if (Value == DateTime.MinValue || string.IsNullOrWhiteSpace(NameProperty))
+            {
+                Notifications.Add(new Notify
+                {
+                    Messager = "Campo Obrigatorio ",
+                    NameProperty = NameProperty
                 });
 
                 return false;

@@ -48,6 +48,9 @@ namespace Backend {
             services.AddScoped(typeof(ISituacaoLancamentoReceitaRepository<SituacaoLancamentoReceita>), typeof(SituacaoLancamentoReceitaRepository));
             services.AddScoped(typeof(ISituacaoLancamentoDespesaRepository<SituacaoLancamentoDespesa>), typeof(SituacaoLancamentoDespesaRepository));
             services.AddScoped(typeof(ILancamentoDespesaRepository<LancamentosDespesa>), typeof(LancamentoDespesaRepository));
+            services.AddScoped(typeof(ILancamentoReceitaRepository<LancamentosReceita>), typeof(LancamentoReceitaRepository));
+            services.AddScoped(typeof(IPagamentoDespesaRepository<PagamentoDespesa>), typeof(PagamentoDespesaRepository));
+            services.AddScoped(typeof(IParecelaDepesaRepository<ParcelaDespesa>), typeof(ParcelaDespesaRepository));
 
 
             var key = Encoding.ASCII.GetBytes (Configurations.GetKeyToken());

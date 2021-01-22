@@ -3,15 +3,17 @@ using System;
 using Backend.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Backend.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20210122002554_AlterLancametoReceita")]
+    partial class AlterLancametoReceita
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,7 +71,7 @@ namespace Backend.Migrations
                         .HasColumnType("integer")
                         .UseIdentityByDefaultColumn();
 
-                    b.Property<int>("ContaId")
+                    b.Property<int?>("ContaId")
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("DataDespesa")
@@ -87,7 +89,7 @@ namespace Backend.Migrations
                     b.Property<int>("TotalParcela")
                         .HasColumnType("integer");
 
-                    b.Property<int>("UsuarioId")
+                    b.Property<int?>("UsuarioId")
                         .HasColumnType("integer");
 
                     b.Property<decimal>("Valor")
@@ -162,10 +164,10 @@ namespace Backend.Migrations
                     b.Property<string>("Historico")
                         .HasColumnType("text");
 
-                    b.Property<int>("ParcelaId")
+                    b.Property<int?>("ParcelaId")
                         .HasColumnType("integer");
 
-                    b.Property<decimal>("ValorPago")
+                    b.Property<decimal?>("ValorPago")
                         .HasColumnType("numeric");
 
                     b.HasKey("Id");
@@ -190,7 +192,7 @@ namespace Backend.Migrations
                     b.Property<string>("Historico")
                         .HasColumnType("text");
 
-                    b.Property<int>("LancamentoId")
+                    b.Property<int?>("LancamentoId")
                         .HasColumnType("integer");
 
                     b.Property<int>("Parcela")
@@ -222,7 +224,7 @@ namespace Backend.Migrations
                     b.Property<string>("Historico")
                         .HasColumnType("text");
 
-                    b.Property<int>("LancamentoId")
+                    b.Property<int?>("LancamentoId")
                         .HasColumnType("integer");
 
                     b.Property<int>("Parcela")
@@ -254,7 +256,7 @@ namespace Backend.Migrations
                     b.Property<string>("Historico")
                         .HasColumnType("text");
 
-                    b.Property<int>("ParcelaReceitaId")
+                    b.Property<int?>("ParcelaReceitaId")
                         .HasColumnType("integer");
 
                     b.Property<decimal>("ValorPago")
@@ -334,9 +336,7 @@ namespace Backend.Migrations
                 {
                     b.HasOne("Backend.Models.ContaDespesa", "Conta")
                         .WithMany("LancamentosDespesas")
-                        .HasForeignKey("ContaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ContaId");
 
                     b.HasOne("Backend.Models.SituacaoLancamentoDespesa", "SitucaoLancamento")
                         .WithMany("LancamentosDespesas")
@@ -345,9 +345,7 @@ namespace Backend.Migrations
 
                     b.HasOne("Backend.Models.Usuario", "Usuario")
                         .WithMany("LancamentosDespesas")
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("Conta");
 
@@ -392,9 +390,7 @@ namespace Backend.Migrations
 
                     b.HasOne("Backend.Models.ParcelaDespesa", "Parcela")
                         .WithMany("PagamentoDespesas")
-                        .HasForeignKey("ParcelaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ParcelaId");
 
                     b.Navigation("Conta");
 
@@ -405,9 +401,7 @@ namespace Backend.Migrations
                 {
                     b.HasOne("Backend.Models.LancamentosDespesa", "Lancamento")
                         .WithMany("ParcelaDespesas")
-                        .HasForeignKey("LancamentoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LancamentoId");
 
                     b.Navigation("Lancamento");
                 });
@@ -416,9 +410,7 @@ namespace Backend.Migrations
                 {
                     b.HasOne("Backend.Models.LancamentosReceita", "Lancamento")
                         .WithMany("ParcelaReceita")
-                        .HasForeignKey("LancamentoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LancamentoId");
 
                     b.Navigation("Lancamento");
                 });
@@ -427,9 +419,7 @@ namespace Backend.Migrations
                 {
                     b.HasOne("Backend.Models.ParcelaReceita", "ParcelaReceita")
                         .WithMany("RecebimentoReceita")
-                        .HasForeignKey("ParcelaReceitaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ParcelaReceitaId");
 
                     b.Navigation("ParcelaReceita");
                 });

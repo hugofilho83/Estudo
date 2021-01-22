@@ -24,28 +24,25 @@ namespace Backend.Controllers
             _repository = repository;
         }
 
-        [AllowAnonymous]
         [HttpGet]
         public async Task<List<LancamentosDespesa>> GetAll()
         {
             return await _repository.List();
         }
 
-        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var situacaoLancamentoDespesa = await _repository.GetEntityById(id);
+            var LancamentoDespesa = await _repository.GetEntityById(id);
 
-            if (situacaoLancamentoDespesa == null)
+            if (LancamentoDespesa == null)
             {
                 return NoContent();
             }
 
-            return Ok(situacaoLancamentoDespesa);
+            return Ok(LancamentoDespesa);
         }
 
-        [AllowAnonymous]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, LancamentosDespesa LancamentoDespesa)
         {
@@ -65,7 +62,6 @@ namespace Backend.Controllers
             return NoContent();
         }
 
-        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] LancamentosDespesa lancamento)
         {

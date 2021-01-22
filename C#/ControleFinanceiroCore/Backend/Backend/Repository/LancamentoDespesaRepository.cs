@@ -65,17 +65,17 @@ namespace Backend.Repository
 
         private void ValidarEntity(LancamentosDespesa Entity)
         {
-            Entity.ValidationPropertyInteger(Entity.Usuario.Id, "Usuário");
-            Entity.ValidationPropertyString(Entity.Conta.Codigo, "Conta");
+            Entity.ValidationPropertyInteger(Entity.UsuarioId, "Usuário");
+            Entity.ValidationPropertyInteger(Entity.ContaId, "Conta");
 
             if (Entity.DataDespesa == DateTime.MinValue)
                 Entity.ValidationPropertyString("", nameof(Entity.DataDespesa));
 
-            Entity.ValidationPropertyString(Entity.Historico, nameof(Entity.Historico));
+            //Entity.ValidationPropertyString(Entity.Historico, nameof(Entity.Historico));
             Entity.ValidationPropertyInteger(Entity.Parcela, nameof(Entity.Parcela));
             Entity.ValidationPropertyInteger(Entity.TotalParcela, nameof(Entity.TotalParcela));
             Entity.ValidationPropertyDecimal(Entity.Valor, nameof(Entity.Valor));
-            Entity.ValidationPropertyInteger(Entity.SitucaoLancamento.Id, "Situacao");
+            Entity.ValidationPropertyInteger(Entity.SitucaoLancamentoId, "Situacao");
         }       
     }
 }
