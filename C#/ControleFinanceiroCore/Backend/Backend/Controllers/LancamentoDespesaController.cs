@@ -67,6 +67,9 @@ namespace Backend.Controllers
         {
             await _repository.Add(lancamento);
 
+            if (lancamento.Notifications.Count > 0)
+                return BadRequest(new { error = lancamento.Notifications });
+
             return CreatedAtAction("GetById", new { id = lancamento.Id }, lancamento);
         }
     }

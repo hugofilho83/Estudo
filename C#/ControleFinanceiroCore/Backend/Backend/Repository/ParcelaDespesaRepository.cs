@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Backend.Repository
 {
-    public class ParcelaDespesaRepository : IParecelaDepesaRepository<ParcelaDespesa>
+    public class ParcelaDespesaRepository : IParcelaDepesaRepository<ParcelaDespesa>
     {
         private readonly DataBaseContext _dataBase;
 

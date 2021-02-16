@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace Backend.Repository.Contract
 {
-    public interface IParecelaDepesaRepository<T> where T : class
-    {
+    public interface IParcelaReceitaRepository<T> where T : class
+    { 
         Task Add(T Entity);
         Task Update(T Entity);
         Task Delete(T Entity);

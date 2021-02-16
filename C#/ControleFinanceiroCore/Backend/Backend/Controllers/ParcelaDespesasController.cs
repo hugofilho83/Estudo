@@ -19,9 +19,9 @@ namespace Backend.Controllers
     [Produces("application/json")]
     public class ParcelaDespesasController : ControllerBase
     {
-        private readonly IParecelaDepesaRepository<ParcelaDespesa> _repository;
+        private readonly IParcelaDepesaRepository<ParcelaDespesa> _repository;
 
-        public ParcelaDespesasController(IParecelaDepesaRepository<ParcelaDespesa> repository)
+        public ParcelaDespesasController(IParcelaDepesaRepository<ParcelaDespesa> repository)
         {
             _repository = repository;
         }

@@ -54,8 +54,8 @@ namespace Backend.Repository
 
             var lancamentos = _dataBase.LancamentosDespesas.Find(Entity.Id);
 
-            lancamentos.Conta.Codigo = Entity.Conta.Codigo;
-            lancamentos.SitucaoLancamento.Codigo = Entity.SitucaoLancamento.Codigo;
+            lancamentos.ContaId = Entity.ContaId;
+            lancamentos.SitucaoLancamentoId = Entity.SitucaoLancamentoId;
             lancamentos.Historico = lancamentos.Historico;
 
             _dataBase.Update(lancamentos);

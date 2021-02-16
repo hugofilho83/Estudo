@@ -17,7 +17,8 @@ namespace Backend.Services {
         public static string GetConnectionString () {
             JToken jAppSettings = JToken.Parse (File.ReadAllText (Path.Combine (Environment.CurrentDirectory, "appsettings.json")));
 
-            string strCnn = jAppSettings["ConnectionStrings"]["ConnetionStringDev"].ToString ();
+            //string strCnn = jAppSettings["ConnectionStrings"]["ConnetionStringDev"].ToString ();
+            string strCnn = jAppSettings["ConnectionStrings"]["ConnetionStringProd"].ToString ();
 
             return strCnn;
         }

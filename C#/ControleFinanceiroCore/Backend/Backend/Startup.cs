@@ -27,6 +27,7 @@ namespace Backend {
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices (IServiceCollection services) {
 
+            //var ConnectionString = Configuration.GetConnectionString ("ConnetionStringProd");
             var ConnectionString = Configuration.GetConnectionString ("ConnetionStringDev");
             services.AddDbContext<DataBaseContext> (option => option.UseNpgsql (ConnectionString));
 
@@ -43,14 +44,26 @@ namespace Backend {
             services.AddControllers ();
 
             services.AddScoped(typeof(IUsuarioRepository<Usuario>), typeof (UsuarioRepository));
+
             services.AddScoped(typeof(IContaReceitaRepository<ContaReceita>), typeof(ContaReceitaRepository));
+
             services.AddScoped(typeof(IContaDespesaRepository<ContaDespesa>), typeof(ContaDespesaRepository));
+
             services.AddScoped(typeof(ISituacaoLancamentoReceitaRepository<SituacaoLancamentoReceita>), typeof(SituacaoLancamentoReceitaRepository));
+
             services.AddScoped(typeof(ISituacaoLancamentoDespesaRepository<SituacaoLancamentoDespesa>), typeof(SituacaoLancamentoDespesaRepository));
+
             services.AddScoped(typeof(ILancamentoDespesaRepository<LancamentosDespesa>), typeof(LancamentoDespesaRepository));
+
             services.AddScoped(typeof(ILancamentoReceitaRepository<LancamentosReceita>), typeof(LancamentoReceitaRepository));
+
             services.AddScoped(typeof(IPagamentoDespesaRepository<PagamentoDespesa>), typeof(PagamentoDespesaRepository));
-            services.AddScoped(typeof(IParecelaDepesaRepository<ParcelaDespesa>), typeof(ParcelaDespesaRepository));
+
+            services.AddScoped(typeof(IParcelaDepesaRepository<ParcelaDespesa>), typeof(ParcelaDespesaRepository));
+
+            services.AddScoped(typeof(IParcelaReceitaRepository<ParcelaReceita>), typeof(ParcelaRecitaRepository));
+
+            services.AddScoped(typeof(IRecebimentoReceitaRepository<RecebimentoReceita>), typeof(RecebimentoReceitaRepository));
 
 
             var key = Encoding.ASCII.GetBytes (Configurations.GetKeyToken());
@@ -86,6 +99,7 @@ namespace Backend {
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure (IApplicationBuilder app, IWebHostEnvironment env) {
+
             if (env.IsDevelopment ()) {
                 app.UseDeveloperExceptionPage ();
             }
