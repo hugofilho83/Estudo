@@ -5,9 +5,11 @@ using Backend.Repository;
 using Backend.Repository.Context;
 using Backend.Repository.Contract;
 using Backend.Services;
+using Backend.Services.Contract;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
@@ -40,6 +42,16 @@ namespace Backend {
                 options.EnableForHttps = true;
             });
 
+            services.AddHttpContextAccessor();
+            services.AddSingleton<IUriService>(o =>
+            {
+                var accessor = o.GetRequiredService<IHttpContextAccessor>();
+                var request = accessor.HttpContext.Request;
+                var uri = string.Concat(request.Scheme, "://", request.Host.ToUriComponent());
+                return new UriService(uri);
+            });
+
+            
             services.AddCors ();
             services.AddControllers ();
 
@@ -95,6 +107,8 @@ namespace Backend {
                 options.SubstituteApiVersionInUrl = true;
             });
 
+            services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Optimal);
+            services.AddResponseCompression(options => { options.Providers.Add<GzipCompressionProvider>(); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -119,6 +133,8 @@ namespace Backend {
             app.UseEndpoints (endpoints => {
                 endpoints.MapControllers ();
             });
+
+            app.UseResponseCompression();
         }
     }
 }

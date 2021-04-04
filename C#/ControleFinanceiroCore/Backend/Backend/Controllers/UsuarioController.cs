@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Backend.Helpers;
 using Backend.Models;
 using Backend.Repository;
 using Backend.Repository.Contract;
 using Backend.Services;
+using Backend.Services.Contract;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -22,15 +24,25 @@ namespace Backend.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepository<Usuario> _repository;
-        public UsuarioController(IUsuarioRepository<Usuario> repository)
+        private readonly IUriService _uriService;
+        public UsuarioController(IUsuarioRepository<Usuario> repository, IUriService uriService)
         {
             _repository = repository;
+            _uriService = uriService;
         }
 
         [HttpGet]
-        public async Task<List<Usuario>> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] PaginationFilter filter)
         {
-            return await _repository.List();
+            var route = Request.Path.Value;
+            var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
+            var pagedData = await _repository.List(filter);
+
+            var totalRecords = await _repository.GetTotalRegister();
+
+            var pagedReponse = PaginationHelper.CreatePagedReponse<Usuario>(pagedData, validFilter, totalRecords, _uriService, route);
+
+            return Ok(pagedReponse);
         }
 
         [HttpGet("{id:int}")]
@@ -39,9 +51,14 @@ namespace Backend.Controllers
             var usuario = await _repository.GetEntityById(Id);
 
             if (usuario == null)
-                NotFound(new { message = "Usuario não localizado...." });
+            {
+                var response = new Response<Usuario>(null);
+                response.Message = "Usuário não localizado.";
+                response.Succeeded = false;
+                return NotFound(response);
+            }
 
-            return usuario;
+            return Ok(new Response<Usuario>(usuario));
         }
 
         [AllowAnonymous]
@@ -87,7 +104,7 @@ namespace Backend.Controllers
                 var token = TokenService.GenerateToken(User, Expires);
                 User.Senha = "";
 
-                return Ok(new { user = User, token = token, Expires = Expires });
+                return Ok(new {token = token, Expires = Expires });
             }
 
             return BadRequest(new { erro = "Usuário localizado." });
